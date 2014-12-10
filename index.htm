@@ -6,10 +6,21 @@
     <style>
         body {
             background: #444;
+            color: #eee;
         }
         pre {
             font-size: 2.5vw;
-            color: #eee;
+        }
+        .progress {
+            position: fixed;
+            bottom: 10px;
+            right: 0;
+            left: 0;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+            font-family: monospace;
         }
     </style>
 </head>
@@ -18,18 +29,18 @@
 <div id="impress">
 
 
-        <div id="1" class="slide step" data-x="-1000" data-y="-400">
-            <pre>
+    <div id="1" class="slide step" data-x="-1000" data-y="-400">
+        <pre>
 function alert(text) {
     return console.log(text);
 }
 
 alert('text');
-            </pre>
-        </div>
+        </pre>
+    </div>
 
-        <div id="2" class="step" data-x="600" data-y="-700">
-            <pre>
+    <div id="2" class="step" data-x="600" data-y="-700">
+        <pre>
 var console = {
     log: function (text) {
         return alert(text);
@@ -37,32 +48,59 @@ var console = {
 };
 
 console.log('text inside');
-            </pre>
-        </div>
+        </pre>
+    </div>
 
-        <div id="3" class="step" data-x="700" data-y="-1500">
-            <pre>
+    <div id="3" class="step" data-x="700" data-y="-1500">
+        <pre>
 var bool = false;
 if (bool.toString().length !== 4) {
     //
 }
-            </pre>
-        </div>
+        </pre>
+    </div>
 
-        <div id="4" class="step" data-x="700" data-y="300" data-rotate="270">
-            <pre>
+    <div id="4" class="step" data-x="700" data-y="300" data-rotate="270">
+        <pre>
 var a = NaN;
 a === a; // false
 a !== a; // true
-            </pre>
+        </pre>
+    </div>
 
+    <div id="5" class="step" data-x="-650" data-y="300">
+        <pre>
+console.log( (0.1 + 0.2).toFixed(1) === 0.3 ); // false
+console.log( +(0.1 + 0.2).toFixed(1) === 0.3 ); // true
+        </pre>
+    </div>
 
 
 </div>
 
+<div class="progress"></div>
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
 <script>
     impress().init();
+
+    var $ = function(sel) {
+        return document.querySelector(sel);
+    };
+    var $$ = function(sel) {
+        return document.querySelectorAll(sel);
+    };
+
+    var text = ' of ' + $$('.step').length;
+    function insertText() {
+        $('.progress').textContent = location.hash.slice(2) + text;
+    }
+    insertText();
+    window.onhashchange = function() {
+        insertText();
+    };
+
 </script>
 </body>
 </html>
