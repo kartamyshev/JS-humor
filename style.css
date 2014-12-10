@@ -5,6 +5,9 @@ body {
 pre {
     font-size: 2.5vw;
 }
+pre span {
+    color: #777;
+}
 .progress {
     position: fixed;
     bottom: 10px;
