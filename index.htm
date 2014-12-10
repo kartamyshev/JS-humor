@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS humor</title>
+    <style>
+        body {
+            background: #444;
+        }
+        pre {
+            font-size: 2.5vw;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div id="impress">
+
+
+        <div id="1" class="slide step" data-x="-1000" data-y="-400">
+            <pre>
+function alert(text) {
+    return console.log(text);
+}
+
+alert('text');
+            </pre>
+        </div>
+
+        <div id="2" class="step" data-x="600" data-y="-700">
+            <pre>
+var console = {
+    log: function (text) {
+        return alert(text);
+    }
+};
+
+console.log('text inside');
+            </pre>
+        </div>
+
+        <div id="3" class="step" data-x="700" data-y="-1500">
+            <pre>
+var bool = false;
+if (bool.toString().length !== 4) {
+    //
+}
+            </pre>
+        </div>
+
+        <div id="4" class="step" data-x="700" data-y="300" data-rotate="270">
+            <pre>
+var a = NaN;
+a === a; // false
+a !== a; // true
+            </pre>
+
+
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"></script>
+<script>
+    impress().init();
+</script>
+</body>
+</html>
