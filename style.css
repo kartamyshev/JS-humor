@@ -5,6 +5,12 @@ body {
 pre {
     font-size: 2.5vw;
 }
+
+a,
+a:link {
+    color: #ff4;
+}
+
 pre span {
     color: #777;
 }
