@@ -51,8 +51,8 @@ a !== a; <span>// true</span>
 
     <div id="5" class="step" data-x="6800">
         <pre>
-console.log( (0.1 + 0.2).toFixed(1) === 0.3 ); <span>// false</span>
-console.log(+(0.1 + 0.2).toFixed(1) === 0.3 ); <span>// true</span>
+ (0.1 + 0.2).toFixed(1) === 0.3; <span>// false</span>
++(0.1 + 0.2).toFixed(1) === 0.3; <span>// true</span>
         </pre>
     </div>
 
@@ -67,10 +67,38 @@ console.log(+(0.1 + 0.2).toFixed(1) === 0.3 ); <span>// true</span>
 
 
     <div id="7" class="step" data-x="10700">
+        <pre>
+typeof null; <span>// object</span>
+null instanceof Object; <span>// false</span>
+        </pre>
+    </div>
+
+
+    <div id="8" class="step" data-x="12300">
+        <pre>
+9999999999999999; <span>// 10000000000000000</span>
+        </pre>
+    </div>
+
+
+    <div id="9" class="step" data-x="14000">
+        <pre>
+Math.max() > Math.min(); <span>// false</span>
+Math.max() < Math.min(); <span>// true</span>
+Math.abs(Math.max()) === Math.min(); <span>// true (thanks God)</span>
+        </pre>
+    </div>
+
+
+
+
+
+    <div id="10" class="step" data-x="15700">
         <pre class="links">
 (: Links :)
 <a href="https://www.destroyallsoftware.com/talks/wat">https://www.destroyallsoftware.com/talks/wat</a>
 <a href="http://www.phpied.com/files/location-location/location-location.html">http://www.phpied.com/files/location-location/location-location.html</a>
+<a href="http://charlieharvey.org.uk/page/javascript_the_weird_parts">http://charlieharvey.org.uk/page/javascript_the_weird_parts</a>
         </pre>
     </div>
 
