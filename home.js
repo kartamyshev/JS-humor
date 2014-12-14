@@ -15,22 +15,21 @@ var App = (function(window, document, undefined){
     } , false);
 
     return {
+
         go: function () {
             var i, j = this.init;
             for (i in j) {
                 j.hasOwnProperty(i) && j[i]();
             }
-
         },
-        init: {
 
+        init: {
             setDataXAttrs: function () {
                 var windowWidth = window.innerWidth;
                 for (var i = 1, j = 0; i <= stepsCount; i++, j++) {
                     $('.step:nth-child(' + i + ')').setAttribute('data-x', windowWidth * j);
                 }
             },
-
             setProgress: function () {
                 var text = ' of ' + stepsCount;
 
@@ -39,14 +38,10 @@ var App = (function(window, document, undefined){
                 }();
 
             },
-
             impress: function () {
                 return impress().init();
             }
-
         }
-
-
 
     };
 

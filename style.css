@@ -1,33 +1,94 @@
 body {
-    background: #444;
-    color: #eee;
+  background: #444;
+  color: #eee;
 }
 pre {
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 pre.links {
-    font-size: 2vw;
-    line-height: 2.7vw;
-}
-a,
-a:link {
-    color: #ff4;
-    text-decoration: underline;
-}
-a:hover {
-    text-decoration: none;
+  font-size: 2vw;
+  line-height: 2.7vw;
 }
 pre span {
-    color: #777;
+  color: #777;
+}
+a {
+  color: #ff4;
+}
+a:link {
+  color: #ff4;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
 }
 .progress {
-    position: fixed;
-    bottom: 10px;
-    right: 0;
-    left: 0;
-    text-align: center;
-    height: 40px;
-    line-height: 40px;
-    font-size: 30px;
-    font-family: monospace;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 30px;
+  font-family: monospace;
+}
+.left-arrow,
+.right-arrow {
+  width: 30px;
+  height: 14px;
+  background: #fff;
+  bottom: 23px;
+  position: absolute;
+  cursor: pointer;
+  -webkit-animation: mymove 1s 3;
+          animation: mymove 1s 3;
+  opacity: 0;
+}
+.left-arrow:before,
+.right-arrow:before,
+.left-arrow:after,
+.right-arrow:after {
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  content: "";
+  height: 0;
+  left: 30px;
+  position: absolute;
+  width: 0;
+}
+.left-arrow:before,
+.right-arrow:before {
+  border-width: 14px 0 0 14px;
+  top: -7px;
+}
+.left-arrow:after,
+.right-arrow:after {
+  border-width: 0 14px 14px;
+  bottom: -7px;
+}
+.right-arrow {
+  right: 50px;
+}
+.left-arrow {
+  left: 50px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+@-webkit-keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mymove {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
