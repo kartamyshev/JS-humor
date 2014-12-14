@@ -26,8 +26,8 @@ var App = (function(window, document, undefined){
         init: {
             setDataXAttrs: function () {
                 var windowWidth = window.innerWidth;
-                for (var i = 1, j = 0; i <= stepsCount; i++, j++) {
-                    $('.step:nth-child(' + i + ')').setAttribute('data-x', windowWidth * j);
+                for (var i = 1; i <= stepsCount; i++) {
+                    $('.step:nth-child(' + i + ')').setAttribute('data-x', windowWidth * (i - 1));
                 }
             },
             setProgress: function () {

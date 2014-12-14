@@ -40,7 +40,6 @@ a:hover {
   background: #fff;
   bottom: 23px;
   position: absolute;
-  cursor: pointer;
   -webkit-animation: mymove 1s 3;
           animation: mymove 1s 3;
   opacity: 0;
