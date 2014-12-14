@@ -7,13 +7,16 @@ pre {
 }
 pre.links {
     font-size: 2vw;
+    line-height: 2.7vw;
 }
-
 a,
 a:link {
     color: #ff4;
+    text-decoration: underline;
 }
-
+a:hover {
+    text-decoration: none;
+}
 pre span {
     color: #777;
 }
