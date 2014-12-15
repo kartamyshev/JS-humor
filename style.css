@@ -9,6 +9,9 @@ pre.links {
   font-size: 2vw;
   line-height: 2.7vw;
 }
+pre.lot-of-text {
+  font-size: 1.5vw;
+}
 pre span {
   color: #777;
 }
