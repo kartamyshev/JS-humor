@@ -110,21 +110,20 @@ if (localStorage[0]) {
 &lt;script&gt;
     console.log(someId.id) <span>// --> someId</span>
     console.log(window.someId.id) <span>// --> someId</span>
-&lt/script&gt;
+
+    console.log('someId' in window) <span>// true</span>
 
 
-console.log('someId' in window) <span>// true</span>
+    var present = false;
 
 
-var present = false;
-
-for (var i in window) {
-    if (i === 'someId') {
-        present = true;
+    for (var i in window) {
+        if (i === 'someId') {
+            present = true;
+        }
     }
-}
-console.log(present); <span>// false (??!)</span>
-
+    console.log(present); <span>// false (??!)</span>
+&lt/script&gt;
         </pre>
     </div>
 
